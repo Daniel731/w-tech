@@ -1,0 +1,38 @@
+.mat-mdc-radio-button ~ .mat-mdc-radio-button {
+  margin-left: 16px;
+}
+
+.container__options {
+  margin-top: 40px;
+  .title__ejercicio__dos {
+    font-size: 19px;
+    letter-spacing: 1px;
+    color: #726e6e;
+    margin-bottom: 22px;
+  }
+  li {
+    p {
+      font-size: 17px;
+      letter-spacing: 1px;
+      color: #726e6e;
+      margin-bottom: 22px;
+    }
+  }
+
+  mat-radio-button span{
+    font-size: 15px;
+    color: #726e6e;
+    margin-bottom: 22px;
+  }
+}
+
+.container__for__inicial {
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.container__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

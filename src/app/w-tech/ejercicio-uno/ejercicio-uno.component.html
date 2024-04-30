@@ -1,0 +1,73 @@
+<div class="container-padre">
+  <div class="container_">
+    <div class="container-information-padre">
+      <div id="content">
+        <section id="menu_lateral" class="pt-2 pb-3 pl-4 pr-4 {{ showOrHideFilters ? 'showFilters' : '' }}">
+          <div class="mat-car-filtros ">
+            <p>
+              <button
+                type="button"
+                class="btn btn-outline-primary ms-2"
+                (click)="isCollapsed = !isCollapsed"
+                [attr.aria-expanded]="!isCollapsed"
+                aria-controls="collapseExample"
+              >
+                Introducción
+              </button>
+            </p>
+            <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed" class="container__collapse">
+              <div class="card_">
+                <div class="card-body">
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary ms-2"
+                    aria-controls="collapseExample"
+                  >
+                    Actividad 1
+                  </button>
+                </div>
+              </div>
+
+              <div class="card_">
+                <div class="card-body">
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary ms-2"
+                    aria-controls="collapseExample"
+                  >
+                    Actividad 2
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-outline-primary ms-2"
+              aria-controls="collapseExample"
+            >
+              Explicación
+            </button>
+
+          </div>
+        </section>
+
+        <section id="results">
+          <div class="container__result">
+
+
+
+          </div>
+        </section>
+
+        <button id="showOrHideFilters" class="btn btn-default btn-light border-right border-bottom border-secondary bg-button-search"
+                (click)="showOrHideFilters = !showOrHideFilters">
+          <mat-icon>{{showOrHideFilters ? 'keyboard_arrow_left' : 'keyboard_arrow_right' }}</mat-icon>
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+</div>

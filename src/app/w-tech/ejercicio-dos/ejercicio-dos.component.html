@@ -1,0 +1,30 @@
+
+<div class="container">
+  <div class="container__options">
+
+    <p class="title__ejercicio__dos">Seleccione las respuesta correctas.</p>
+    <div *ngFor="let data of ejercicioDos" class="container__for__inicial">
+      <ul>
+        <li>
+          <p>{{ data.label }}</p>
+        </li>
+      </ul>
+
+      <mat-radio-group aria-label="Select an option" *ngFor="let options of data.options" [name]="data.pregunta">
+
+        <mat-radio-button [value]="options.id"  (change)="validateOptionSelect(data.pregunta, options)"><span>{{ options.label }}</span></mat-radio-button>
+        <br>
+      </mat-radio-group>
+
+    </div>
+
+
+    <div class="container__button">
+
+      <button mat-flat-button color="primary" (click)="validateOption()" [disabled]="statusButton">Comprobar</button>
+
+    </div>
+  </div>
+</div>
+
+
